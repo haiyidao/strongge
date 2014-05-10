@@ -2,6 +2,9 @@ package com.haiyidao.strongge;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.Intent;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
@@ -18,5 +21,16 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
-
+	
+	private void beginService(){
+		startService(new Intent(this,BackgroundService.class));
+	}
+	
+	private Boolean hasService(){
+		Boolean result = false;
+		
+		return result;
+	}
+	
+	
 }
